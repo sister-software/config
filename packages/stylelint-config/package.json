@@ -1,0 +1,32 @@
+{
+  "name": "@sister.software/stylelint-config",
+  "version": "1.0.0",
+  "main": "mod.cjs",
+  "description": "Sister Software's stylelint config",
+  "repository": "git@github.com:sister-software/eslint-config.git",
+  "author": "teffen@sister.software",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "type": "module",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "import": "./mod.mjs",
+      "require": "./mod.cjs"
+    },
+    "./mod.cjs": "./mod.cjs",
+    "./mod.mjs": "./mod.mjs"
+  },
+  "devDependencies": {
+    "stylelint": ">=14.16.1"
+  },
+  "dependencies": {
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-standard": "^29.0.0"
+  },
+  "peerDependencies": {
+    "stylelint": ">=14.16.1"
+  }
+}
