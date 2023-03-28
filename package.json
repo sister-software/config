@@ -1,6 +1,6 @@
 {
   "name": "@sister.software/config",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "repository": "git@github.com:sister-software/eslint-config.git",
   "description": "Sister Software's linter configurations.",
   "author": "teffen@sister.software",

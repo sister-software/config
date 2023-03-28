@@ -1,6 +1,6 @@
 {
   "name": "@sister.software/eslint-config",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "main": "mod.cjs",
   "types": "mod.d.mts",
   "description": "Sister Software's ESLint config",

@@ -1,6 +1,6 @@
 {
   "name": "@sister.software/stylelint-config",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "main": "mod.cjs",
   "description": "Sister Software's stylelint config",
   "repository": "git@github.com:sister-software/eslint-config.git",
