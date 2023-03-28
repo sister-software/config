@@ -1,6 +1,6 @@
 {
   "name": "@sister.software/prettier-config",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "main": "mod.cjs",
   "description": "Sister Software's ESLint config",
   "repository": "git@github.com:sister-software/eslint-config.git",
