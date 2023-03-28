@@ -2,6 +2,7 @@
   "name": "@sister.software/eslint-config",
   "version": "2.0.0",
   "main": "mod.cjs",
+  "types": "mod.d.mts",
   "description": "Sister Software's ESLint config",
   "repository": "git@github.com:sister-software/eslint-config.git",
   "author": "teffen@sister.software",
@@ -14,10 +15,12 @@
     "./package.json": "./package.json",
     ".": {
       "import": "./mod.mjs",
-      "require": "./mod.cjs"
+      "require": "./mod.cjs",
+      "types": "./mod.d.mts"
     },
     "./mod.cjs": "./mod.cjs",
-    "./mod.mjs": "./mod.mjs"
+    "./mod.mjs": "./mod.mjs",
+    "./mod.d.mts": "./mod.d.mts"
   },
   "prettier": "@sister.software/prettier-config",
   "dependencies": {

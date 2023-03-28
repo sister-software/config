@@ -5,10 +5,10 @@
  * See LICENSE file in the project root for full license information.
  */
 
-/** @type {import('prettier').Options} */
-module.exports = {
-  semi: false,
-  singleQuote: true,
-  printWidth: 120,
-  organizeImportsSkipDestructiveCodeActions: true,
+declare module '@sister.software/stylelint-config' {
+  import { Config } from 'stylelint'
+
+  const config: Config
+
+  export default config
 }

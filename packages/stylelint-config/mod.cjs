@@ -5,6 +5,7 @@
  * See LICENSE file in the project root for full license information.
  */
 
+/** @type {import('stylelint').Config} */
 module.exports = {
   extends: ['stylelint-config-standard', 'stylelint-config-prettier'],
   ignoreFiles: ['dist/**/*.css', 'build/**/*.css'],

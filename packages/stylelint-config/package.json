@@ -17,7 +17,8 @@
       "require": "./mod.cjs"
     },
     "./mod.cjs": "./mod.cjs",
-    "./mod.mjs": "./mod.mjs"
+    "./mod.mjs": "./mod.mjs",
+    "./mod.d.mts": "./mod.d.mts"
   },
   "devDependencies": {
     "stylelint": ">=14.16.1"
