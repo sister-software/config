@@ -23,10 +23,10 @@
     "stylelint": ">=14.16.1"
   },
   "dependencies": {
-    "stylelint-config-prettier": "^9.0.3",
-    "stylelint-config-standard": "^29.0.0"
+    "stylelint-config-prettier": ">=9",
+    "stylelint-config-standard": ">=31"
   },
   "peerDependencies": {
-    "stylelint": ">=14.16.1"
+    "stylelint": ">=15.3.0"
   }
 }
