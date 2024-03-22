@@ -1,6 +1,6 @@
 {
  "name": "@sister.software/prettier-config",
- "version": "3.0.2",
+ "version": "3.0.3",
  "description": "Sister Software's ESLint config",
  "repository": "git@github.com:sister-software/eslint-config.git",
  "license": "MIT",

@@ -1,50 +1,50 @@
 {
- "name": "@sister.software/config",
- "version": "3.0.2",
- "private": true,
- "description": "Sister Software's linter configurations.",
- "keywords": [
-  "eslint",
-  "prettier",
-  "typescript",
-  "stylelint"
- ],
- "repository": "git@github.com:sister-software/eslint-config.git",
- "license": "MIT",
- "author": "teffen@sister.software",
- "type": "module",
- "workspaces": [
-  "packages/*"
- ],
- "scripts": {
-  "format:check": "prettier --cache --check -u .",
-  "format:fix": "prettier --cache --write -u .",
-  "lint:check": "eslint .",
-  "lint:fix": "eslint --fix .",
-  "release": "release-it"
- },
- "prettier": "@sister.software/prettier-config",
- "devDependencies": {
-  "@release-it-plugins/workspaces": "^4.2.0",
-  "eslint": "^8.57.0",
-  "eslint-config-prettier": "^9.1.0",
-  "prettier": "^3.2.5",
-  "prettier-plugin-jsdoc": "^1.3.0",
-  "prettier-plugin-organize-imports": "^3.2",
-  "prettier-plugin-packagejson": "^2.4.12",
-  "release-it": "^17.1.1",
-  "stylelint": "^16.2.1",
-  "typescript": "^5.4.3",
-  "typescript-eslint": "^7.3.1"
- },
- "packageManager": "yarn@3.6.0",
- "engines": {
-  "node": ">=20.11"
- },
- "release-it": {
-  "plugins": {
-   "@release-it-plugins/workspaces": true
+  "name": "@sister.software/config",
+  "version": "3.0.3",
+  "private": true,
+  "description": "Sister Software's linter configurations.",
+  "keywords": [
+    "eslint",
+    "prettier",
+    "typescript",
+    "stylelint"
+  ],
+  "repository": "git@github.com:sister-software/eslint-config.git",
+  "license": "MIT",
+  "author": "teffen@sister.software",
+  "type": "module",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "format:check": "prettier --cache --check -u .",
+    "format:fix": "prettier --cache --write -u .",
+    "lint:check": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "release": "release-it"
   },
-  "npm": false
- }
+  "prettier": "@sister.software/prettier-config",
+  "devDependencies": {
+    "@release-it-plugins/workspaces": "^4.2.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "^3.2.5",
+    "prettier-plugin-jsdoc": "^1.3.0",
+    "prettier-plugin-organize-imports": "^3.2",
+    "prettier-plugin-packagejson": "^2.4.12",
+    "release-it": "^17.1.1",
+    "stylelint": "^16.2.1",
+    "typescript": "^5.4.3",
+    "typescript-eslint": "^7.3.1"
+  },
+  "packageManager": "yarn@3.6.0",
+  "engines": {
+    "node": ">=20.11"
+  },
+  "release-it": {
+    "plugins": {
+      "@release-it-plugins/workspaces": true
+    },
+    "npm": false
+  }
 }
