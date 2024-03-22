@@ -1,75 +1,108 @@
 /**
- * @license See LICENSE file in the project root for full license information.
+ * ESLint configuration for Sister Software projects.
+ *
+ * @license MIT
  * @author Teffen Ellis, et al.
  * @copyright Sister Software. All rights reserved.
  */
 
-/**
- * Header to be inserted at the top of every file.
- */
-const filePreamble = `*
- * @copyright Sister Software. All rights reserved.
- * @author Teffen Ellis, et al.
- * @license
- * See LICENSE file in the project root for full license information.
- `
+// @ts-check
 
-/**
- * Header to be inserted at the top of every file, split into lines.
- */
-const filePreambleAsLines = filePreamble.split("\n")
+import eslint from "@eslint/js"
+import reactPlugin from "eslint-plugin-react"
+import hooksPlugin from "eslint-plugin-react-hooks"
+import tseslint from "typescript-eslint"
 
-/** @type {import("eslint").ESLint.ConfigData} */
-module.exports = {
-	root: true,
-	ignorePatterns: ["./packages/*/dist/**/*", "./node_modules/**/*"],
-	parser: "@typescript-eslint/parser",
-	plugins: ["@typescript-eslint", "eslint-plugin-tsdoc", "header"],
-	settings: {
-		react: {
-			version: "18.2.0",
+export default tseslint.config(
+	eslint.configs.recommended,
+	...tseslint.configs.recommended,
+
+	{
+		plugins: {
+			react: reactPlugin,
 		},
-		"import/parsers": {
-			"@typescript-eslint/parser": [".ts", ".mts", ".tsx"],
+		rules: {
+			...reactPlugin.configs["jsx-runtime"].rules,
+			"react/display-name": "off",
+			"react/jsx-curly-brace-presence": "error",
+			"react/jsx-no-leaked-render": "error",
+			"react/function-component-definition": [
+				"error",
+				{
+					namedComponents: "arrow-function",
+					unnamedComponents: "arrow-function",
+				},
+			],
+			"react/prop-types": "off",
+			"react/react-in-jsx-scope": "off",
+		},
+		settings: {
+			react: {
+				version: "detect",
+			},
 		},
 	},
-	extends: [
-		"eslint:recommended",
-		"plugin:react/recommended",
-		"plugin:react-hooks/recommended",
-		"plugin:@typescript-eslint/recommended",
-		"prettier",
-	],
-	env: {
-		browser: true,
-		node: true,
-		worker: true,
+
+	{
+		plugins: {
+			"react-hooks": hooksPlugin,
+		},
+		rules: hooksPlugin.configs.recommended.rules,
 	},
-	rules: {
-		"header/header": [1, "block", filePreambleAsLines, 2],
-		"react/prop-types": "off",
-		"no-undef": "off",
-		"no-extra-semi": "off",
-		"@typescript-eslint/no-extra-semi": "off",
-		"prefer-const": "warn",
-		"no-unused-vars": "off",
-		"@typescript-eslint/no-unused-vars": [
-			"warn",
-			{
-				ignoreRestSiblings: true,
-				argsIgnorePattern: "^_",
-				varsIgnorePattern: "logger",
-			},
+	{
+		ignores: [
+			// ---
+			"./packages/*/dist/**/*",
+			"./dist/**/*",
+			"./node_modules/**/*",
 		],
-		"@typescript-eslint/ban-types": "off",
-		"@typescript-eslint/no-non-null-assertion": "off",
-		"@typescript-eslint/no-explicit-any": "off",
-		"@typescript-eslint/no-empty-interface": "off",
-		"@typescript-eslint/ban-ts-comment": [
-			"warn",
-			{
-				"ts-ignore": "allow-with-description",
-			},
-		],
-	},
-}
+
+		rules: {
+			...hooksPlugin.configs.recommended.rules,
+			"@typescript-eslint/ban-ts-comment": [
+				"warn",
+				{
+					"ts-ignore": "allow-with-description",
+				},
+			],
+			"@typescript-eslint/ban-types": "off",
+			"@typescript-eslint/no-empty-interface": "off",
+			"@typescript-eslint/no-explicit-any": "off",
+			"@typescript-eslint/no-extra-semi": "off",
+			"@typescript-eslint/no-misused-new": "off",
+			"@typescript-eslint/no-non-null-assertion": "off",
+			"@typescript-eslint/no-shadow": [
+				"warn",
+				{
+					ignoreFunctionTypeParameterNameValueShadow: true,
+					ignoreTypeValueShadow: true,
+				},
+			],
+			"@typescript-eslint/no-unused-vars": [
+				"warn",
+				{
+					ignoreRestSiblings: true,
+					argsIgnorePattern: "^_",
+					varsIgnorePattern: "logger",
+				},
+			],
+			"@typescript-eslint/no-var-requires": "off",
+
+			eqeqeq: ["error", "always", { null: "ignore" }],
+			"no-shadow": "off",
+			"no-extra-semi": "off",
+			"no-undef": "off",
+			"no-unused-vars": "off",
+			"object-shorthand": [
+				"warn",
+				"always",
+				{
+					avoidQuotes: true,
+					ignoreConstructors: true,
+					avoidExplicitReturnArrows: false,
+				},
+			],
+			"prefer-const": "warn",
+		},
+	}
+)

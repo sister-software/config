@@ -1,5 +1,7 @@
 /**
- * @license See LICENSE file in the project root for full license information.
+ * ESLint configuration for Sister Software projects.
+ *
+ * @license MIT
  * @author Teffen Ellis, et al.
  * @copyright Sister Software. All rights reserved.
  */
