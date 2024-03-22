@@ -6,7 +6,7 @@
 
 /** @type {import("stylelint").Config} */
 const stylelintConfig = {
-	extends: ["stylelint-config-standard", "stylelint-config-prettier"],
+	extends: ["stylelint-config-standard"],
 	ignoreFiles: ["dist/**/*.css", "build/**/*.css"],
 	rules: {
 		indentation: 2,
