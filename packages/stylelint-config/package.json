@@ -1,30 +1,30 @@
 {
- "name": "@sister.software/stylelint-config",
- "version": "3.0.0",
- "description": "Sister Software's stylelint config",
- "repository": "git@github.com:sister-software/eslint-config.git",
- "license": "MIT",
- "author": "teffen@sister.software",
- "type": "module",
- "exports": {
-  "./package.json": "./package.json",
-  ".": {
-   "import": "./index.js",
-   "types": "./index.d.ts"
-  }
- },
- "types": "index.d.ts",
- "dependencies": {
-  "stylelint-config-prettier": "^9.0.5",
-  "stylelint-config-standard": "^36.0.0"
- },
- "devDependencies": {
-  "stylelint": "^16.2.1"
- },
- "peerDependencies": {
-  "stylelint": "^16.2.1"
- },
- "publishConfig": {
-  "access": "public"
- }
+	"name": "@sister.software/stylelint-config",
+	"version": "3.0.0",
+	"description": "Sister Software's stylelint config",
+	"repository": "git@github.com:sister-software/eslint-config.git",
+	"license": "MIT",
+	"author": "teffen@sister.software",
+	"type": "module",
+	"exports": {
+		"./package.json": "./package.json",
+		".": {
+			"import": "./index.js",
+			"types": "./index.d.ts"
+		}
+	},
+	"types": "index.d.ts",
+	"dependencies": {
+		"stylelint-config-prettier": "^9.0.5",
+		"stylelint-config-standard": "^36.0.0"
+	},
+	"devDependencies": {
+		"stylelint": "^16.2.1"
+	},
+	"peerDependencies": {
+		"stylelint": "^16.2.1"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
 }
