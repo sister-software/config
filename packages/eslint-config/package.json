@@ -1,36 +1,36 @@
 {
-	"name": "@sister.software/eslint-config",
-	"version": "2.0.1",
-	"description": "Sister Software's ESLint config",
-	"repository": "git@github.com:sister-software/eslint-config.git",
-	"license": "MIT",
-	"author": "teffen@sister.software",
-	"type": "module",
-	"exports": {
-		"./package.json": "./package.json",
-		".": {
-			"import": "./index.js",
-			"types": "./index.d.ts"
-		}
-	},
-	"types": "index.d.ts",
-	"prettier": "@sister.software/prettier-config",
-	"dependencies": {
-		"@typescript-eslint/eslint-plugin": "^7.3.1",
-		"@typescript-eslint/parser": "^7.3.1",
-		"eslint": "^8.57.0",
-		"eslint-config-prettier": "^9.1.0",
-		"eslint-plugin-header": "^3.1.1",
-		"eslint-plugin-react": "^7.34.1",
-		"eslint-plugin-react-hooks": "^4.6.0",
-		"prettier": "^3.2.5",
-		"prettier-plugin-organize-imports": "^3.2.4",
-		"typescript": "^5.4.3"
-	},
-	"engines": {
-		"node": ">=20.11"
-	},
-	"publishConfig": {
-		"access": "public"
-	}
+ "name": "@sister.software/eslint-config",
+ "version": "3.0.0",
+ "description": "Sister Software's ESLint config",
+ "repository": "git@github.com:sister-software/eslint-config.git",
+ "license": "MIT",
+ "author": "teffen@sister.software",
+ "type": "module",
+ "exports": {
+  "./package.json": "./package.json",
+  ".": {
+   "import": "./index.js",
+   "types": "./index.d.ts"
+  }
+ },
+ "types": "index.d.ts",
+ "prettier": "@sister.software/prettier-config",
+ "dependencies": {
+  "@typescript-eslint/eslint-plugin": "^7.3.1",
+  "@typescript-eslint/parser": "^7.3.1",
+  "eslint": "^8.57.0",
+  "eslint-config-prettier": "^9.1.0",
+  "eslint-plugin-header": "^3.1.1",
+  "eslint-plugin-react": "^7.34.1",
+  "eslint-plugin-react-hooks": "^4.6.0",
+  "prettier": "^3.2.5",
+  "prettier-plugin-organize-imports": "^3.2.4",
+  "typescript": "^5.4.3"
+ },
+ "engines": {
+  "node": ">=20.11"
+ },
+ "publishConfig": {
+  "access": "public"
+ }
 }
